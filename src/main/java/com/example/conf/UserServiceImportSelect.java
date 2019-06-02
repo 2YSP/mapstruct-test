@@ -11,7 +11,8 @@ import java.util.Map;
  */
 public class UserServiceImportSelect implements ImportSelector {
 
-
+    /** @Import 注解最终调用的都是ImportSelector的selectImports()方法**/
+    
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
         Map<String, Object> map = importingClassMetadata.getAnnotationAttributes(EnableUserService.class.getName(), true);
